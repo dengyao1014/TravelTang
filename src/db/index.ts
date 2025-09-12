@@ -1,9 +1,6 @@
 import { drizzle } from "drizzle-orm/postgres-js";
 import postgres from "postgres";
 
-// Database instance for Node.js environment
-let dbInstance: ReturnType<typeof drizzle> | null = null;
-
 export function db() {
   let databaseUrl = process.env.DATABASE_URL;
 
@@ -11,10 +8,8 @@ export function db() {
     throw new Error("DATABASE_URL is not set");
   }
 
-  // In Node.js environment, use singleton pattern
-  if (dbInstance) {
-    return dbInstance;
-  }
+  // Database instance for Node.js environment
+  let dbInstance: ReturnType<typeof drizzle> | null = null;
 
   // Node.js environment with connection pool configuration
   const client = postgres(databaseUrl, {
