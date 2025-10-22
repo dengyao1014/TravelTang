@@ -1,17 +1,17 @@
 {
   "metadata": {
-    "title": "几小时内构建任何 AI SaaS 创业项目 | ShipAny",
-    "description": "ShipAny 是一个用于构建 AI SaaS 创业项目的 NextJS 模板，提供各种模板和组件，帮助您快速启动。",
-    "keywords": "ShipAny, AI SaaS 模板, NextJS 模板"
+    "title": "畅游中国 - 您的完美中国旅行助手 | 旅游指南与智能助手",
+    "description": "为国际游客提供专业的中国旅游指南、移动支付设置帮助和24小时智能咨询服务。",
+    "keywords": "中国旅游指南, 微信支付设置, 支付宝教程, 中国旅游, 旅游智能助手, 城市攻略"
   },
   "user": {
     "sign_in": "登录",
     "sign_out": "退出登录",
-    "credits": "额度",
-    "api_keys": "API 密钥",
+    "my_guides": "我的攻略",
+    "chat_history": "聊天记录",
     "my_orders": "我的订单",
     "user_center": "用户中心",
-    "admin_system": "管理后台"
+    "travel_planner": "行程规划"
   },
   "sign_modal": {
     "sign_in_title": "登录",
@@ -34,13 +34,13 @@
   },
   "my_orders": {
     "title": "我的订单",
-    "description": "在 ShipAny 上购买的订单。",
-    "no_orders": "未找到订单",
-    "tip": "",
-    "activate_order": "激活订单",
+    "description": "您购买的旅游指南和服务。",
+    "no_orders": "暂无订单",
+    "tip": "立即获取旅游指南和智能助手服务！",
+    "download_guides": "下载指南",
     "actived": "已激活",
-    "join_discord": "加入 Discord",
-    "read_docs": "阅读文档",
+    "chat_support": "在线咨询",
+    "view_guides": "查看指南",
     "table": {
       "order_no": "订单号",
       "email": "邮箱",
@@ -88,13 +88,13 @@
     }
   },
   "blog": {
-    "title": "博客",
-    "description": "关于 ShipAny 的新闻、资源和更新",
+    "title": "旅游博客",
+    "description": "中国旅游攻略、城市指南和文化见闻",
     "read_more_text": "阅读更多",
     "no_content": "暂无内容",
-    "all": "全部",
-    "category": "分类",
-    "author": "作者"
+    "all": "所有文章",
+    "category": "目的地",
+    "author": "旅游专家"
   },
   "my_invites": {
     "title": "我的邀请",
@@ -125,12 +125,12 @@
     }
   },
   "feedback": {
-    "title": "反馈",
-    "description": "我们很乐意听取您对产品的看法或如何改进产品体验。",
+    "title": "旅行反馈",
+    "description": "分享您的旅行体验，帮助我们改进指南和服务。",
     "submit": "提交",
     "loading": "提交中...",
-    "contact_tip": "其他联系方式",
-    "rating_tip": "您对 ShipAny 的看法如何？",
-    "placeholder": "在这里留下您的反馈..."
+    "contact_tip": "需要即时帮助？",
+    "rating_tip": "您对畅游中国的服务感觉如何？",
+    "placeholder": "在这里分享您的旅行故事或建议..."
   }
 }

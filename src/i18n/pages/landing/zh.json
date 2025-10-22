@@ -1,5 +1,5 @@
 {
-  "template": "shipany-template-one",
+  "template": "traveltang-website",
   "theme": "light",
   "header": {
     "brand": {
@@ -82,41 +82,41 @@
     "show_badge": false
   },
   "branding": {
-    "title": "ShipAny 建立在巨人的肩膀上",
+    "title": "全球旅行者的信赖之选",
     "items": [
       {
-        "title": "Next.js",
+        "title": "支付宝",
         "image": {
-          "src": "/imgs/logos/nextjs.svg",
-          "alt": "Next.js"
+          "src": "/imgs/logos/alipay.svg",
+          "alt": "支付宝"
         }
       },
       {
-        "title": "React",
+        "title": "微信",
         "image": {
-          "src": "/imgs/logos/react.svg",
-          "alt": "React"
+          "src": "/imgs/logos/wechat.svg",
+          "alt": "微信"
         }
       },
       {
-        "title": "TailwindCSS",
+        "title": "中国旅游",
         "image": {
           "src": "/imgs/logos/tailwindcss.svg",
-          "alt": "TailwindCSS"
+          "alt": "中国旅游"
         }
       },
       {
-        "title": "Shadcn/UI",
+        "title": "旅游局",
         "image": {
           "src": "/imgs/logos/shadcn.svg",
-          "alt": "Shadcn/UI"
+          "alt": "旅游局"
         }
       },
       {
-        "title": "Vercel",
+        "title": "旅行指南",
         "image": {
           "src": "/imgs/logos/vercel.svg",
-          "alt": "Vercel"
+          "alt": "旅行指南"
         }
       }
     ]
@@ -181,8 +181,8 @@
   },
   "usage": {
     "name": "usage",
-    "title": "如何使用 ShipAny 启动项目",
-    "description": "通过三个简单步骤启动您的 AI SaaS 创业项目：",
+    "title": "如何开始使用畅游中国",
+    "description": "通过四个简单步骤开启您的中国之旅：",
     "image": {
       "src": "/imgs/features/1.png"
     },
@@ -190,29 +190,29 @@
     "text_align": "center",
     "items": [
       {
-        "title": "获取 ShipAny",
-        "description": "一次性付款购买 ShipAny。查收邮件获取代码和文档。",
+        "title": "获取旅游指南",
+        "description": "购买我们的服务，立即获取详细的支付设置指南和城市攻略PDF。",
         "image": {
           "src": "/imgs/features/5.png"
         }
       },
       {
-        "title": "开始您的项目",
-        "description": "阅读文档并克隆 ShipAny 代码。开始构建您的 AI SaaS 创业项目。",
+        "title": "设置移动支付",
+        "description": "按照我们的指南一步步设置微信支付和支付宝，为旅程做好准备。",
         "image": {
           "src": "/imgs/features/6.png"
         }
       },
       {
-        "title": "定制您的项目",
-        "description": "使用您的数据和内容修改模板。满足特定的 AI 功能需求。",
+        "title": "规划行程",
+        "description": "使用我们的城市攻略和AI助手，规划您的完美旅程。",
         "image": {
           "src": "/imgs/features/7.png"
         }
       },
       {
-        "title": "部署到生产环境",
-        "description": "通过几个步骤将项目部署到生产环境，立即开始服务客户。",
+        "title": "开启探索之旅",
+        "description": "带着我们的指南和24/7智能助手，轻松自在地探索中国。",
         "image": {
           "src": "/imgs/features/8.png"
         }
@@ -399,7 +399,7 @@
       },
       "url": "/"
     },
-    "copyright": "© 2025 • ShipAny 保留所有权利。",
+    "copyright": "© 2025 • 畅游中国 保留所有权利。",
     "nav": {
       "items": [
         {
@@ -469,13 +469,13 @@
         {
           "title": "X",
           "icon": "RiTwitterXFill",
-          "url": "https://x.com/shipanyai",
+          "url": "https://x.com/traveltang",
           "target": "_blank"
         },
         {
           "title": "Github",
           "icon": "RiGithubFill",
-          "url": "https://github.com/shipanyai",
+          "url": "https://github.com/traveltang",
           "target": "_blank"
         },
         {
@@ -487,7 +487,7 @@
         {
           "title": "邮箱",
           "icon": "RiMailLine",
-          "url": "mailto:support@shipany.codes",
+          "url": "mailto:support@traveltang.com",
           "target": "_self"
         }
       ]

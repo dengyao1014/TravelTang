@@ -1,5 +1,5 @@
 {
-  "template": "shipany-template-one",
+  "template": "traveltang-website",
   "theme": "light",
   "header": {
     "brand": {
@@ -181,8 +181,8 @@
   },
   "usage": {
     "name": "usage",
-    "title": "How to Launch with ShipAny",
-    "description": "Get your AI SaaS startup running in three simple steps:",
+    "title": "How to Get Started with TravelTang",
+    "description": "Start your China journey in four easy steps:",
     "image": {
       "src": "/imgs/features/1.png"
     },
@@ -190,29 +190,29 @@
     "text_align": "center",
     "items": [
       {
-        "title": "Get ShipAny",
-        "description": "Buy ShipAny with a one-time payment. Check your email for the code and documentation.",
+        "title": "Get Travel Guides",
+        "description": "Purchase our service and instantly receive detailed payment setup guides and city guides in PDF format.",
         "image": {
           "src": "/imgs/features/5.png"
         }
       },
       {
-        "title": "Start Your Project",
-        "description": "Read the documentation and clone the code of ShipAny. Start building your AI SaaS startup.",
+        "title": "Setup Mobile Payments",
+        "description": "Follow our step-by-step guide to set up WeChat Pay and Alipay for your journey.",
         "image": {
           "src": "/imgs/features/6.png"
         }
       },
       {
-        "title": "Customize Your Project",
-        "description": "Modify the template with your data and contents. Specific AI functionality needs.",
+        "title": "Plan Your Trip",
+        "description": "Use our city guides and AI assistant to plan your perfect itinerary.",
         "image": {
           "src": "/imgs/features/7.png"
         }
       },
       {
-        "title": "Deploy to Production",
-        "description": "Deploy your project to production with a few steps and start serving customers immediately.",
+        "title": "Start Exploring",
+        "description": "Explore China confidently with our guides and 24/7 AI assistant at your service.",
         "image": {
           "src": "/imgs/features/8.png"
         }
@@ -399,7 +399,7 @@
       },
       "url": "/"
     },
-    "copyright": "© 2025 • ShipAny All rights reserved.",
+    "copyright": "© 2025 • TravelTang All rights reserved.",
     "nav": {
       "items": [
         {
@@ -469,13 +469,13 @@
         {
           "title": "X",
           "icon": "RiTwitterXFill",
-          "url": "https://x.com/shipanyai",
+          "url": "https://x.com/traveltang",
           "target": "_blank"
         },
         {
           "title": "Github",
           "icon": "RiGithubFill",
-          "url": "https://github.com/shipanyai",
+          "url": "https://github.com/traveltang",
           "target": "_blank"
         },
         {
@@ -487,7 +487,7 @@
         {
           "title": "Email",
           "icon": "RiMailLine",
-          "url": "mailto:support@shipany.codes",
+          "url": "mailto:support@traveltang.com",
           "target": "_self"
         }
       ]

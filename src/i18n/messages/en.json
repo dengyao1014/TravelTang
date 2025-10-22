@@ -1,17 +1,17 @@
 {
   "metadata": {
-    "title": "Ship Any AI SaaS Startups in hours | ShipAny",
-    "description": "ShipAny is a NextJS boilerplate for building AI SaaS startups, Ship Fast with a variety of templates and components.",
-    "keywords": "ShipAny, AI SaaS Boilerplate, NextJS Boilerplate"
+    "title": "TravelTang - Your Ultimate China Travel Companion | Travel Guides & AI Assistant",
+    "description": "Get expert travel guides for China, mobile payment setup help, and 24/7 AI assistance for international travelers.",
+    "keywords": "China travel guide, WeChat Pay setup, Alipay guide, China tourism, travel AI assistant, China city guides"
   },
   "user": {
     "sign_in": "Sign In",
     "sign_out": "Sign Out",
-    "credits": "Credits",
-    "api_keys": "API Keys",
+    "my_guides": "My Guides",
+    "chat_history": "Chat History",
     "my_orders": "My Orders",
     "user_center": "User Center",
-    "admin_system": "Admin System"
+    "travel_planner": "Trip Planner"
   },
   "sign_modal": {
     "sign_in_title": "Sign In",
@@ -34,13 +34,13 @@
   },
   "my_orders": {
     "title": "My Orders",
-    "description": "orders paid with ShipAny.",
+    "description": "Your purchased travel guides and services.",
     "no_orders": "No orders found",
-    "tip": "",
-    "activate_order": "Activate Order",
+    "tip": "Get started with our travel guides and AI assistant!",
+    "download_guides": "Download Guides",
     "actived": "Activated",
-    "join_discord": "Join Discord",
-    "read_docs": "Read Docs",
+    "chat_support": "Chat Support",
+    "view_guides": "View Guides",
     "table": {
       "order_no": "Order No",
       "email": "Email",
@@ -88,13 +88,13 @@
     }
   },
   "blog": {
-    "title": "Blog",
-    "description": "News, resources, and updates about ShipAny",
+    "title": "Travel Blog",
+    "description": "Travel tips, city guides, and cultural insights about China",
     "read_more_text": "Read More",
-    "no_content": "No content",
-    "all": "All",
-    "category": "Category",
-    "author": "Author"
+    "no_content": "No content yet",
+    "all": "All Posts",
+    "category": "Destinations",
+    "author": "Travel Expert"
   },
   "my_invites": {
     "title": "My Invites",
@@ -125,12 +125,12 @@
     }
   },
   "feedback": {
-    "title": "Feedback",
-    "description": "We'd love to hear what went well or how we can improve the product experience.",
+    "title": "Travel Feedback",
+    "description": "Share your travel experience and help us improve our guides and services.",
     "submit": "Submit",
     "loading": "Submitting...",
-    "contact_tip": "Other ways to contact us",
-    "rating_tip": "How do you feel about ShipAny?",
-    "placeholder": "Leave your words here..."
+    "contact_tip": "Need immediate assistance?",
+    "rating_tip": "How was your experience with TravelTang?",
+    "placeholder": "Share your travel story or suggestions here..."
   }
 }
