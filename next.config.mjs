@@ -26,6 +26,8 @@ const nextConfig = {
   async redirects() {
     return [];
   },
+  // Add this to suppress hydration warnings
+  suppressHydrationWarnings: true,
 };
 
 // Make sure experimental mdx flag is enabled
