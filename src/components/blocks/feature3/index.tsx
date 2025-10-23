@@ -1,11 +1,41 @@
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@radix-ui/react-tabs";
+"use client";
 
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
 import { Section as SectionType } from "@/types/blocks/section";
+import { useEffect, useState } from "react";
 
 export default function Feature3({ section }: { section: SectionType }) {
   if (section.disabled) {
     return null;
+  }
+
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return (
+      <section className="py-16">
+        <div className="container px-8">
+          <div className="mb-16 max-w-xl px-8 lg:px-0">
+            {section.label && (
+              <Badge variant="outline" className="mb-4">
+                {section.label}
+              </Badge>
+            )}
+            <h2 className="mb-6 text-pretty text-3xl font-bold lg:text-4xl">
+              {section.title}
+            </h2>
+            <p className="mb-4 max-w-xl text-muted-foreground lg:max-w-none lg:text-lg">
+              {section.description}
+            </p>
+          </div>
+        </div>
+      </section>
+    );
   }
 
   return (

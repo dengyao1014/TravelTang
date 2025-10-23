@@ -26,8 +26,13 @@ export default function Feature2({ section }: { section: SectionType }) {
     return null;
   }
 
+  const [mounted, setMounted] = useState(false);
   const [api, setApi] = useState<CarouselApi>();
   const [currentAccordion, setCurrentAccordion] = useState("1");
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     api?.scrollTo(+currentAccordion - 1);
@@ -57,73 +62,77 @@ export default function Feature2({ section }: { section: SectionType }) {
             <p className="mb-4 max-w-xl text-muted-foreground lg:max-w-none lg:text-lg">
               {section.description}
             </p>
-            <Accordion
-              type="single"
-              value={currentAccordion}
-              onValueChange={(value) => {
-                setCurrentAccordion(value);
-                console.log(value);
-                api?.scrollTo(+value - 1);
-              }}
-            >
-              {section.items?.map((item, i) => (
-                <AccordionItem
-                  key={i}
-                  value={(i + 1).toString()}
-                  className="border-b-0 border-secondary"
-                >
-                  <AccordionTrigger className="text-left data-[state=closed]:text-muted-foreground">
-                    <div className="flex items-center justify-between gap-2">
-                      {item.icon && (
-                        <p className="flex size-9 items-center justify-center rounded-lg bg-muted">
-                          <Icon
-                            name={item.icon}
-                            className="size-5 shrink-0 lg:size-6"
-                          />
-                        </p>
-                      )}
-                      <span className="font-medium lg:text-lg">
-                        {item.title}
-                      </span>
-                    </div>
-                  </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground lg:text-base">
-                    {item.description}
-                    <div className="mt-8 h-px bg-muted">
-                      <div
-                        className="h-px animate-progress bg-primary"
-                        style={{
-                          animationDuration: `${DURATION}ms`,
-                        }}
-                      ></div>
-                    </div>
-                  </AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
+            {mounted && (
+              <Accordion
+                type="single"
+                value={currentAccordion}
+                onValueChange={(value) => {
+                  setCurrentAccordion(value);
+                  console.log(value);
+                  api?.scrollTo(+value - 1);
+                }}
+              >
+                {section.items?.map((item, i) => (
+                  <AccordionItem
+                    key={i}
+                    value={(i + 1).toString()}
+                    className="border-b-0 border-secondary"
+                  >
+                    <AccordionTrigger className="text-left data-[state=closed]:text-muted-foreground">
+                      <div className="flex items-center justify-between gap-2">
+                        {item.icon && (
+                          <p className="flex size-9 items-center justify-center rounded-lg bg-muted">
+                            <Icon
+                              name={item.icon}
+                              className="size-5 shrink-0 lg:size-6"
+                            />
+                          </p>
+                        )}
+                        <span className="font-medium lg:text-lg">
+                          {item.title}
+                        </span>
+                      </div>
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground lg:text-base">
+                      {item.description}
+                      <div className="mt-8 h-px bg-muted">
+                        <div
+                          className="h-px animate-progress bg-primary"
+                          style={{
+                            animationDuration: `${DURATION}ms`,
+                          }}
+                        ></div>
+                      </div>
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            )}
           </div>
           <div>
-            <Carousel
-              opts={{
-                duration: 50,
-              }}
-              setApi={setApi}
-              plugins={[Fade()]}
-            >
-              <CarouselContent>
-                {section.items?.map((item, i) => (
-                  <CarouselItem key={i}>
-                    <div>
-                      <img
-                        src={item.image?.src}
-                        alt={item.image?.alt || item.title}
-                        className="max-h-auto w-full object-cover lg:max-h-none rounded-md"
-                      />
-                    </div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-            </Carousel>
+            {mounted && (
+              <Carousel
+                opts={{
+                  duration: 50,
+                }}
+                setApi={setApi}
+                plugins={[Fade()]}
+              >
+                <CarouselContent>
+                  {section.items?.map((item, i) => (
+                    <CarouselItem key={i}>
+                      <div>
+                        <img
+                          src={item.image?.src}
+                          alt={item.image?.alt || item.title}
+                          className="max-h-auto w-full object-cover lg:max-h-none rounded-md"
+                        />
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+              </Carousel>
+            )}
           </div>
         </div>
       </div>

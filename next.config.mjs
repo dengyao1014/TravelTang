@@ -28,6 +28,13 @@ const nextConfig = {
   },
   // Add this to suppress hydration warnings
   suppressHydrationWarnings: true,
+  // Disable SSR and static optimization for components with dynamic IDs
+  compiler: {
+    styledComponents: true,
+  },
+  experimental: {
+    mdxRs: true,
+  },
 };
 
 // Make sure experimental mdx flag is enabled

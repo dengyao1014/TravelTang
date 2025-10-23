@@ -32,10 +32,11 @@ import { useTranslations } from "next-intl";
 export default function SignModal() {
   const t = useTranslations();
   const { showSignModal, setShowSignModal } = useAppContext();
-
+  const [mounted, setMounted] = React.useState(false);
+  React.useEffect(() => { setMounted(true); }, []);
   const [open, setOpen] = React.useState(false);
   const isDesktop = useMediaQuery("(min-width: 768px)");
-
+  if (!mounted) return null;
   if (isDesktop) {
     return (
       <Dialog open={showSignModal} onOpenChange={setShowSignModal}>
@@ -51,7 +52,6 @@ export default function SignModal() {
       </Dialog>
     );
   }
-
   return (
     <Drawer open={showSignModal} onOpenChange={setShowSignModal}>
       <DrawerContent>

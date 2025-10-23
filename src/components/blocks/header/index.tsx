@@ -1,5 +1,6 @@
 "use client";
 
+import * as React from "react";
 import {
   Accordion,
   AccordionContent,
@@ -34,10 +35,14 @@ import ThemeToggle from "@/components/theme/toggle";
 import { cn } from "@/lib/utils";
 
 export default function Header({ header }: { header: HeaderType }) {
+  const [mounted, setMounted] = React.useState(false);
+  React.useEffect(() => { setMounted(true); }, []);
   if (header.disabled) {
     return null;
   }
-
+  if (!mounted) {
+    return null;
+  }
   return (
     <section className="py-3">
       <div className="container">
