@@ -90,31 +90,24 @@ function ProfileForm({ className }: React.ComponentProps<"form">) {
         {t("sign_modal.email_sign_in")}
       </Button> */}
 
-      {process.env.NEXT_PUBLIC_AUTH_GOOGLE_ENABLED === "true" && (
-        <Button
-          variant="outline"
-          className="w-full flex items-center gap-2"
-          onClick={() => {
-            signIn("google");
-          }}
-        >
-          <SiGoogle className="w-4 h-4" />
-          {t("sign_modal.google_sign_in")}
-        </Button>
-      )}
-
-      {process.env.NEXT_PUBLIC_AUTH_GITHUB_ENABLED === "true" && (
-        <Button
-          variant="outline"
-          className="w-full flex items-center gap-2"
-          onClick={() => {
-            signIn("github");
-          }}
-        >
-          <SiGithub className="w-4 h-4" />
-          {t("sign_modal.github_sign_in")}
-        </Button>
-      )}
+      <Button
+        variant="outline"
+        className="w-full flex items-center gap-2"
+        onClick={async () => {
+          try {
+            const baseUrl = window.location.origin;
+            await signIn("google", {
+              redirect: true,
+              callbackUrl: `${baseUrl}/api/auth/callback/google`,
+            });
+          } catch (error) {
+            console.error("Google sign in error:", error);
+          }
+        }}
+      >
+        <SiGoogle className="w-4 h-4" />
+        {t("sign_modal.google_sign_in")}
+      </Button>
     </div>
   );
 }

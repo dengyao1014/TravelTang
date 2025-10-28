@@ -40,7 +40,7 @@ export default function SignForm({
                 <Button
                   variant="outline"
                   className="w-full"
-                  onClick={() => signIn("google")}
+                  onClick={() => signIn("google", { callbackUrl: `${process.env.NEXTAUTH_URL}/api/auth/callback/google` })}
                 >
                   <SiGoogle className="w-4 h-4" />
                   {t("sign_modal.google_sign_in")}

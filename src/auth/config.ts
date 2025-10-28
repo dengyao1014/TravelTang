@@ -84,8 +84,16 @@ if (
 ) {
   providers.push(
     GoogleProvider({
-      clientId: process.env.AUTH_GOOGLE_ID,
-      clientSecret: process.env.AUTH_GOOGLE_SECRET,
+      clientId: process.env.AUTH_GOOGLE_ID!,
+      clientSecret: process.env.AUTH_GOOGLE_SECRET!,
+      authorization: {
+        params: {
+          redirect_uri: `${process.env.NEXTAUTH_URL}/api/auth/callback/google`,
+          prompt: "consent",
+          access_type: "offline",
+          response_type: "code"
+        }
+      }
     })
   );
 }
@@ -117,8 +125,9 @@ export const providerMap = providers
 
 export const authOptions: NextAuthConfig = {
   providers,
-  pages: {
-    signIn: "/auth/signin",
+  debug: true,
+  session: {
+    strategy: "jwt",
   },
   callbacks: {
     async signIn({ user, account, profile, email, credentials }) {
@@ -148,6 +157,8 @@ export const authOptions: NextAuthConfig = {
     async jwt({ token, user, account }) {
       // Persist the OAuth access_token and or the user id to the token right after signin
       try {
+        console.log('Database URL in jwt callback:', process.env.DATABASE_URL);
+        
         if (!user || !account) {
           return token;
         }
