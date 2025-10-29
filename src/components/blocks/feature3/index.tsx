@@ -19,8 +19,8 @@ export default function Feature3({ section }: { section: SectionType }) {
   if (!mounted) {
     return (
       <section className="py-16">
-        <div className="container px-8">
-          <div className="mb-16 max-w-xl px-8 lg:px-0">
+        <div className="container">
+          <div className="mx-auto mb-16 max-w-3xl text-center md:text-left">
             {section.label && (
               <Badge variant="outline" className="mb-4">
                 {section.label}
@@ -40,8 +40,8 @@ export default function Feature3({ section }: { section: SectionType }) {
 
   return (
     <section className="py-16">
-      <div className="container px-8">
-        <div className="mb-16 max-w-xl px-8 lg:px-0">
+      <div className="container">
+        <div className="mx-auto mb-16 max-w-3xl text-center md:text-left">
           {section.label && (
             <Badge variant="outline" className="mb-4">
               {section.label}
@@ -54,29 +54,29 @@ export default function Feature3({ section }: { section: SectionType }) {
             {section.description}
           </p>
         </div>
-        <div>
+        <div className="mx-auto max-w-5xl">
           <Tabs defaultValue="tab-1">
-            <TabsList className="relative grid items-start gap-6 lg:grid-cols-4">
-              <div className="absolute left-4 right-0 top-[30px] -z-10 hidden h-px bg-input lg:block"></div>
+            <TabsList className="grid gap-4 rounded-3xl border border-input/40 bg-background/80 p-4 shadow-sm md:grid-cols-2 lg:grid-cols-4">
               {section.items?.map((item, index) => {
                 return (
                   <TabsTrigger
                     key={index}
                     value={`tab-${index + 1}`}
-                    className="group pointer-events-none lg:pointer-events-auto"
+                    className="group h-full pointer-events-none lg:pointer-events-auto"
                   >
-                    <div className="flex gap-4 rounded-md px-8 py-4 text-left hover:bg-muted/50 lg:block lg:px-4">
-                      <div className="flex flex-col items-center lg:contents">
-                        <span className="flex size-7 shrink-0 items-center justify-center rounded-full border bg-background font-mono text-xs font-medium lg:group-data-[state=active]:bg-primary lg:group-data-[state=active]:text-primary-foreground lg:group-data-[state=active]:ring-3 lg:group-data-[state=active]:ring-primary/40">
+                    <div className="flex h-full items-start gap-4 rounded-2xl border border-transparent bg-muted/20 px-5 py-6 text-left transition hover:bg-muted/40 group-data-[state=active]:border-primary group-data-[state=active]:bg-background group-data-[state=active]:shadow-md lg:flex-col lg:items-start lg:px-6">
+                      <div className="flex shrink-0 items-center justify-center">
+                        <span className="flex size-9 items-center justify-center rounded-full border bg-background font-mono text-sm font-semibold group-data-[state=active]:bg-primary group-data-[state=active]:text-primary-foreground group-data-[state=active]:ring-2 group-data-[state=active]:ring-primary/40">
                           {index + 1}
                         </span>
-                        <span className="h-full w-px bg-input lg:hidden"></span>
                       </div>
-                      <div>
-                        <h3 className="mb-1 font-medium lg:mt-4">
+                      <div className="flex flex-col gap-2 text-left lg:text-left">
+                        <h3 className="text-base font-semibold">
                           {item.title}
                         </h3>
-                        <p className="text-sm">{item.description}</p>
+                        <p className="text-sm text-muted-foreground">
+                          {item.description}
+                        </p>
                       </div>
                     </div>
                     {item.image && (
@@ -94,7 +94,7 @@ export default function Feature3({ section }: { section: SectionType }) {
                 );
               })}
             </TabsList>
-            <div className="mt-8 hidden rounded-xl lg:block">
+            <div className="mt-8 hidden lg:block">
               {section.items?.map((item, index) => {
                 if (!item.image) return null;
 
@@ -102,7 +102,7 @@ export default function Feature3({ section }: { section: SectionType }) {
                   <TabsContent
                     key={index}
                     value={`tab-${index + 1}`}
-                    className="aspect-video"
+                    className="aspect-video overflow-hidden rounded-3xl border shadow-md"
                   >
                     {item.image && (
                       <img
