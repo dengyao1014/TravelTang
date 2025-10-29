@@ -15,12 +15,15 @@ import { Label } from "@/components/ui/label";
 import { cn } from "@/lib/utils";
 import { signIn } from "next-auth/react";
 import { useTranslations } from "next-intl";
+import { useSearchParams } from "next/navigation";
 
 export default function SignForm({
   className,
   ...props
 }: React.ComponentPropsWithoutRef<"div">) {
   const t = useTranslations();
+  const searchParams = useSearchParams();
+  const callbackUrlParam = searchParams.get("callbackUrl");
 
   return (
     <div className={cn("flex flex-col gap-6", className)} {...props}>
@@ -40,7 +43,15 @@ export default function SignForm({
                 <Button
                   variant="outline"
                   className="w-full"
-                  onClick={() => signIn("google", { callbackUrl: `${process.env.NEXTAUTH_URL}/api/auth/callback/google` })}
+                  onClick={() =>
+                    signIn("google", {
+                      callbackUrl:
+                        callbackUrlParam ||
+                        (typeof window !== "undefined"
+                          ? window.location.href
+                          : undefined),
+                    })
+                  }
                 >
                   <SiGoogle className="w-4 h-4" />
                   {t("sign_modal.google_sign_in")}

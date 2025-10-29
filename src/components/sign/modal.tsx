@@ -95,10 +95,11 @@ function ProfileForm({ className }: React.ComponentProps<"form">) {
         className="w-full flex items-center gap-2"
         onClick={async () => {
           try {
-            const baseUrl = window.location.origin;
+            const params = new URLSearchParams(window.location.search);
+            const callbackUrl = params.get("callbackUrl") || window.location.href;
             await signIn("google", {
               redirect: true,
-              callbackUrl: `${baseUrl}/api/auth/callback/google`,
+              callbackUrl,
             });
           } catch (error) {
             console.error("Google sign in error:", error);

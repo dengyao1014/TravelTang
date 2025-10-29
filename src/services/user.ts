@@ -69,8 +69,15 @@ export async function getUserUuid() {
   }
 
   const session = await auth();
-  if (session && session.user && session.user.uuid) {
-    user_uuid = session.user.uuid;
+  if (session && session.user) {
+    if (session.user.uuid) {
+      user_uuid = session.user.uuid;
+    } else if (session.user.email) {
+      const user = await findUserByEmail(session.user.email);
+      if (user?.uuid) {
+        user_uuid = user.uuid;
+      }
+    }
   }
 
   return user_uuid;
